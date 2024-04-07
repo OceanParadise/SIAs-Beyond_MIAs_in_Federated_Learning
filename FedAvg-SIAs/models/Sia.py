@@ -32,6 +32,23 @@ def entropy_modified(probability, target):
         entr_modi.append(ent_mod)
     return entr_modi
 
+'''
+************
+'''
+def cosine_similarity(vec1, vec2): #两个模型参数的余弦相似度（百分数）
+    if vec1.dim() > 1:
+        vec1 = vec1.squeeze()
+    if vec2.dim() > 1:
+        vec2 = vec2.squeeze()
+    dot_product = torch.dot(vec1, vec2)
+    norm_vec1 = torch.norm(vec1)
+    norm_vec2 = torch.norm(vec2)
+    similarity = dot_product / (norm_vec1 * norm_vec2)
+    return 1 - ((similarity+1)/2)
+"""
+************
+"""
+
 
 class DatasetSplit(Dataset):
     def __init__(self, dataset, idxs):
@@ -69,18 +86,68 @@ class SIA(object):
                 y_losse = []
 
                 idx_tensor = torch.tensor(idx)
-                net.load_state_dict(self.w_locals[local])
-                net.eval()
+                
+'''
+************
+'''
+                #net.load_state_dict(self.w_locals[local])
+                #net.eval()
+'''
+************
+'''
+
+
                 for id, (data, target) in enumerate(dataset_local):
                     if self.args.gpu != -1:
                         data, target = data.cuda(), target.cuda()
                         idx_tensor = idx_tensor.cuda()
+                    
+
+'''
+************
+'''
+                    epochs = 20  # 定义训练的轮次
+                    net.load_state_dict(self.w_locals[local])
+                    optimizer = torch.optim.SGD(net.parameters(), lr=self.args.lr, momentum=self.args.momentum)
+                    loss_func = nn.CrossEntropyLoss()
+
+                    weights_before = torch.cat([p.data.view(-1) for p in net.parameters()])
+
+                    for epoch in range(epochs):
+                        net.zero_grad()
+                        # 前向传播
+                        output = net(data)
+                        loss = loss_func(output, target)
+                        
+                        loss.backward()  # 反向传播
+                        optimizer.step()  # 更新参数
+                    
+                    weights_after = torch.cat([p.data.view(-1) for p in net.parameters()])
+
+                    similarity = cosine_similarity(weights_before.unsqueeze(0), weights_after.unsqueeze(0))
+                    
+
+                    net.load_state_dict(self.w_locals[local])
+                    net.eval()
+'''
+************
+'''
+
                     log_prob = net(data)
                     # prediction loss based attack: get the prediction loss of the test sample
                     loss = nn.CrossEntropyLoss(reduction='none')
                     y_loss = loss(log_prob, target)
-                    y_losse.append(y_loss.cpu().detach().numpy())
 
+
+'''
+************
+'''
+                    y_losse.append(y_loss.cpu().detach().numpy()*0.001 + similarity.cpu().numpy()*0.999)
+                   # y_losse.append(y_loss.cpu().detach().numpy())
+
+'''
+************
+'''
 
 
                 y_losse = np.concatenate(y_losse).reshape(-1)
