@@ -5,6 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6731261b-ee05-43f7-aa5a-2730ef04267c" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/SIAs-Beyond_MIAs_in_Federated_Learning.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FedAvg-SIAs/main_fed2.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FedAvg-SIAs/models/Sia3_batch.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/FedAvg-SIAs/models/Sia4_single.py" afterDir="false" />
@@ -238,7 +244,7 @@
       <workItem from="1717579314827" duration="2052000" />
       <workItem from="1717639211896" duration="23604000" />
       <workItem from="1718004793912" duration="10586000" />
-      <workItem from="1718069986071" duration="4409000" />
+      <workItem from="1718069986071" duration="5131000" />
     </task>
     <servers />
   </component>
