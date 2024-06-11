@@ -14,6 +14,7 @@ from sklearn import metrics
 def _safe_prob(probs, small_value=1e-30):
     return np.maximum(probs, small_value)
 
+
 def uncertainty(probability, n_classes):
     uncert = []
     for i in range(len(probability)):
@@ -27,15 +28,18 @@ def entropy_modified(probability, target):
     for i in range(len(probability)):
         ent_mod_1 = (-1) * (1 - probability[i][int(target[i])]) * np.log(_safe_prob(probability[i][int(target[i])]))
         probability_rest = np.delete(probability[i], int(target[i]))
-        ent_mod_2 = -np.sum(probability_rest* np.log(_safe_prob(1 - probability_rest)))
+        ent_mod_2 = -np.sum(probability_rest * np.log(_safe_prob(1 - probability_rest)))
         ent_mod = ent_mod_1 + ent_mod_2
         entr_modi.append(ent_mod)
     return entr_modi
 
+
 '''
-************
+******1******
 '''
-def cosine_similarity(vec1, vec2): #两个模型参数的余弦相似度（百分数）
+
+
+def cosine_similarity(vec1, vec2):  # 两个模型参数的余弦相似度（百分数）
     if vec1.dim() > 1:
         vec1 = vec1.squeeze()
     if vec2.dim() > 1:
@@ -44,9 +48,11 @@ def cosine_similarity(vec1, vec2): #两个模型参数的余弦相似度（百�
     norm_vec1 = torch.norm(vec1)
     norm_vec2 = torch.norm(vec2)
     similarity = dot_product / (norm_vec1 * norm_vec2)
-    return 1 - ((similarity+1)/2)
+    return 1 - ((similarity + 1) / 2)
+
+
 """
-************
+******1******
 """
 
 
@@ -86,27 +92,26 @@ class SIA(object):
                 y_losse = []
 
                 idx_tensor = torch.tensor(idx)
-                
-'''
-************
-'''
-                #net.load_state_dict(self.w_locals[local])
-                #net.eval()
-'''
-************
-'''
 
+                '''
+******2******
+                '''
+                # net.load_state_dict(self.w_locals[local])
+                # net.eval()
+                net.train()
+                '''
+******2******
+                '''
 
                 for id, (data, target) in enumerate(dataset_local):
                     if self.args.gpu != -1:
                         data, target = data.cuda(), target.cuda()
                         idx_tensor = idx_tensor.cuda()
-                    
 
-'''
-************
-'''
-                    epochs = 20  # 定义训练的轮次
+                    '''
+******3******
+                    '''
+                    epochs = 10  # 定义训练的轮次
                     net.load_state_dict(self.w_locals[local])
                     optimizer = torch.optim.SGD(net.parameters(), lr=self.args.lr, momentum=self.args.momentum)
                     loss_func = nn.CrossEntropyLoss()
@@ -118,37 +123,33 @@ class SIA(object):
                         # 前向传播
                         output = net(data)
                         loss = loss_func(output, target)
-                        
+
                         loss.backward()  # 反向传播
                         optimizer.step()  # 更新参数
-                    
+
                     weights_after = torch.cat([p.data.view(-1) for p in net.parameters()])
 
                     similarity = cosine_similarity(weights_before.unsqueeze(0), weights_after.unsqueeze(0))
-                    
 
                     net.load_state_dict(self.w_locals[local])
                     net.eval()
-'''
-************
-'''
+                    '''
+******3******
+                    '''
 
                     log_prob = net(data)
                     # prediction loss based attack: get the prediction loss of the test sample
                     loss = nn.CrossEntropyLoss(reduction='none')
                     y_loss = loss(log_prob, target)
 
-
-'''
-************
-'''
-                    y_losse.append(y_loss.cpu().detach().numpy()*0.001 + similarity.cpu().numpy()*0.999)
-                   # y_losse.append(y_loss.cpu().detach().numpy())
-
-'''
-************
-'''
-
+                    '''
+******4******
+                    '''
+                    y_losse.append(y_loss.cpu().detach().numpy() * 0.01 + similarity.cpu().numpy() * 0.99)
+                    # y_losse.append(y_loss.cpu().detach().numpy())
+                    '''
+******4******
+                    '''
 
                 y_losse = np.concatenate(y_losse).reshape(-1)
                 y_loss_all.append(y_losse)

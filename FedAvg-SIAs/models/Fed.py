@@ -1,4 +1,5 @@
 import copy
+from .Update import LocalUpdate
 
 
 def FedAvg(w, weight):
@@ -10,3 +11,4 @@ def FedAvg(w, weight):
             w_avg[k] += weight[i] * w[i][k]
 
     return w_avg
+

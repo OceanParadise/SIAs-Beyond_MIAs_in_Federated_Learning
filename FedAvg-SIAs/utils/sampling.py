@@ -6,7 +6,8 @@ from .options import args_parser
 
 args = args_parser()
 
-
+# 创建类别字典
+# 每个key对应label，对应的值为所有label为x的样本的index
 def build_classes_dict(dataset):
     classes = {}
     for ind, x in enumerate(dataset):
@@ -26,6 +27,8 @@ def build_classes_dict(dataset):
 def sample_dirichlet_train_data(dataset, no_participants, no_samples, alpha=0.1):
     random.seed(args.manualseed)
     data_classes = build_classes_dict(dataset)
+    data_classes_copy = data_classes
+
     class_size = len(data_classes[0])
     per_participant_list = defaultdict(list)
     per_samples_list = defaultdict(list)
@@ -53,4 +56,4 @@ def sample_dirichlet_train_data(dataset, no_participants, no_samples, alpha=0.1)
                                         replace=False)
         per_samples_list[i].extend(np.array(per_participant_list[i])[sample_index])
 
-    return per_participant_list, per_samples_list
+    return per_participant_list, per_samples_list, data_classes_copy

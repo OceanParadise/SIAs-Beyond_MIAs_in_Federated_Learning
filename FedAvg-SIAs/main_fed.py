@@ -2,10 +2,13 @@ import copy
 import numpy as np
 import torch
 import os
+
+from torch.utils.data import DataLoader
+
 from models.Fed import FedAvg
-from models.Sia import SIA
-from models.Nets import MLP, Mnistcnn, CifarCnn
 from models.Update import LocalUpdate
+from models.Sia3_batch import SIA
+from models.Nets import MLP, Mnistcnn, CifarCnn
 from models.test import test_img
 from utils.dataset import get_dataset, exp_details
 from utils.options import args_parser
@@ -90,9 +93,13 @@ if __name__ == '__main__':
                 w_locals.append(copy.deepcopy(w))
             loss_locals.append(copy.deepcopy(loss))
 
+
+        # update global weights
+        w_glob = FedAvg(w_locals, size_weight)
+
         # implement source inference attack
-        S_attack = SIA(args=args, w_locals=w_locals, dataset=dataset_train, dict_mia_users=dict_sample_user)
-        attack_acc_loss = S_attack.attack(net=empty_net.to(args.device))
+        S_attack = SIA(args=args, w_locals=w_locals, dataset=dataset_train, dict_mia_users=dict_sample_user, w_global=w_glob)
+        attack_acc_loss, w_glob = S_attack.attack(net=empty_net.to(args.device))
 
         logger.append([args.alpha, iter, attack_acc_loss])
 
@@ -102,9 +109,6 @@ if __name__ == '__main__':
             torch.save(dict_party_user, os.path.join(args.checkpoint, 'local_data'))
 
         best_att_acc = max(best_att_acc, attack_acc_loss)
-
-        # update global weights
-        w_glob = FedAvg(w_locals, size_weight)
 
         # copy weight to net_glob
         net_glob.load_state_dict(w_glob)
@@ -125,3 +129,38 @@ if __name__ == '__main__':
     print("Training accuracy: {:.2f}".format(acc_train))
     print("Testing accuracy: {:.2f}".format(acc_test))
     print('Best attack accuracy: {:.2f}'.format(best_att_acc))
+
+# implement source inference attack
+# S_attack = SIA(args=args, w_locals=w_locals, dataset=dataset_train, dict_mia_users=dict_sample_user)
+# attack_acc_loss = S_attack.attack(net=empty_net.to(args.device))
+
+    '''for idx in dict_sample_user:
+    dataset_local = DataLoader(DatasetSplit(dataset_train, dict_sample_user[idx]), batch_size=1, shuffle=False)
+    for id, (data, target) in enumerate(dataset_local):
+    net_glob = empty_net
+    w_glob = net_glob.state_dict()
+    best_att_acc = 0
+    for iter in range(args.epochs):
+        loss_locals = []
+        if not args.all_clients:
+            w_locals = []
+        m = max(int(args.frac * args.num_users), 1)
+        idxs_users = np.random.choice(range(args.num_users), m, replace=False)
+    
+        for idx in idxs_users:
+            local = LocalUpdate(args=args, dataset=dataset_train, idxs=dict_party_user[idx])
+            w, loss = local.train(net=copy.deepcopy(net_glob).to(args.device))
+    
+            if args.all_clients:
+                w_locals[idx] = copy.deepcopy(w)
+            else:
+                w_locals.append(copy.deepcopy(w))
+            loss_locals.append(copy.deepcopy(loss))
+    
+        w_glob = FedAvg(w_locals, size_weight)
+        # implement source inference attack
+        S_attack = SIA(args=args, w_locals=w_locals, dataset=dataset_train, dict_mia_users=dict_sample_user,
+                       w_glob=w_glob)
+        index, poisoned_w = S_attack.attack(data=data, target=target, net=empty_net.to(args.device))
+        w_glob = poisoned_w
+        net_glob.load_state_dict(w_glob)'''

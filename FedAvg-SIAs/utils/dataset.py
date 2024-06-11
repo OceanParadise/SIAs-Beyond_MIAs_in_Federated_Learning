@@ -28,8 +28,8 @@ def get_dataset(args):
         data_dir = './data/mnist/'
 
         apply_transform = transforms.Compose([
-            transforms.ToTensor(),
-            transforms.Normalize((0.1307,), (0.3081,))])
+            transforms.ToTensor(),                          # 将图像数据转化为torch的Tensor类型，便于torch处理
+            transforms.Normalize((0.1307,), (0.3081,))])    # output=（input-mean）/std
 
         train_dataset = datasets.MNIST(data_dir, train=True, download=True,
                                        transform=apply_transform)
@@ -68,7 +68,7 @@ def get_dataset(args):
         train_dataset = DataLoader(TensorDataset(torch.from_numpy(x_train).float(), torch.from_numpy(y_train).long()))
         test_dataset = DataLoader(TensorDataset(torch.from_numpy(x_val).float(), torch.from_numpy(y_val).long()))
         # sample non-iid data
-        dict_party_user, dict_sample_user = sample_dirichlet_train_data(train_dataset, args.num_users, args.num_samples,
+        dict_party_user, dict_sample_user, data_classes= sample_dirichlet_train_data(train_dataset, args.num_users, args.num_samples,
                                                                         args.alpha)
 
     else:
@@ -76,7 +76,7 @@ def get_dataset(args):
         test_dataset = []
         dict_party_user, dict_sample_user = {}, {}
         print('+' * 10 + 'Error: unrecognized dataset' + '+' * 10)
-    return train_dataset, test_dataset, dict_party_user, dict_sample_user
+    return train_dataset, test_dataset, dict_party_user, dict_sample_user, data_classes
 
 
 def exp_details(args):

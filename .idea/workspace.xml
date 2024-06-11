@@ -1,31 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="980e152b-de5b-4a24-ae63-a5f2cde3452e" name="Default Changelist" comment="add folder">
+    <list default="true" id="6731261b-ee05-43f7-aa5a-2730ef04267c" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/FedAvg-SIAs/main_fed2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedAvg-SIAs/models/Sia3_batch.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedAvg-SIAs/models/Sia4_single.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedAvg-SIAs/models/Sia_in_Fed.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedAvg-SIAs/models/attack2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_CIFAR10/CNN_128_128_128.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_CIFAR10/CNN_128_128_192.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_CIFAR10/CNN_128_192_256.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_CIFAR10/CNN_128_256.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_CIFAR10/CNN_128_384.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_CIFAR10/CNN_128_512.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_CIFAR10/CNN_256_256.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_CIFAR10/CNN_256_512.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_CIFAR10/CNN_64_128_192.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_CIFAR10/CNN_64_128_256.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_MNIST/CNN_128_128_128.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_MNIST/CNN_128_128_192.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_MNIST/CNN_128_192_256.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_MNIST/CNN_128_256.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_MNIST/CNN_128_384.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_MNIST/CNN_128_512.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_MNIST/CNN_256_256.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_MNIST/CNN_256_512.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_MNIST/CNN_64_128_192.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FedMD-SIAs/pretrained_MNIST/CNN_64_128_256.h5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedAvg-SIAs/main_fed.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedAvg-SIAs/main_fed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedAvg-SIAs/models/Fed.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedAvg-SIAs/models/Fed.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedAvg-SIAs/models/Nets.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedAvg-SIAs/models/Nets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedAvg-SIAs/models/Sia.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedAvg-SIAs/models/Sia.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedAvg-SIAs/utils/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedAvg-SIAs/utils/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedAvg-SIAs/utils/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedAvg-SIAs/utils/options.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedAvg-SIAs/utils/sampling.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedAvg-SIAs/utils/sampling.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedSGD-SIAs/models/Sia.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedSGD-SIAs/models/Sia.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedSGD-SIAs/models/Update.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedSGD-SIAs/models/Update.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedSGD-SIAs/utils/dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedSGD-SIAs/utils/dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FedSGD-SIAs/utils/options.py" beforeDir="false" afterPath="$PROJECT_DIR$/FedSGD-SIAs/utils/options.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectId" id="27j5XXKENohhkL5Sf62aGq8HU5P" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2emGedVVlkaAbWA27yK7O76evGT" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.CIFAR.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FEMNIST.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Fed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.FedMD_SIAs.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Sia.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Sia3.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Sia4_single.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.Sia_in_Fed.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.client.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_fed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main_fed2.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.options.executor&quot;: &quot;Run&quot;,
+    &quot;Python.posixpath.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.mappings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.highlight.symlinks&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.date&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.permissions&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowPanel.toolwindow.show.size&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;G:/workspace/Membership-Inference-Attacks-by-Exploiting-Loss-Trajectory&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;G:/workspace/SIAs/FedAvg-SIAs/data/synthetic/generate_systhetic.py&quot;,
+    &quot;two.files.diff.last.used.folder&quot;: &quot;G:/workspace/SIAs/FedMD-SIAs&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="SIAs-Beyond_MIAs_in_Federated_Learning" is-module-sdk="true">
+        <option name="myUseModuleSdk" value="true" />
+        <option name="myModuleName" value="SIAs-Beyond_MIAs_in_Federated_Learning" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\workspace\SIAs-Beyond_MIAs_in_Federated_Learning\FedSGD-SIAs\data" />
+      <recent name="G:\workspace\SIAs-Beyond_MIAs_in_Federated_Learning\FedAvg-SIAs\data\mnist\MNIST\raw" />
+      <recent name="G:\workspace\SIAs-Beyond_MIAs_in_Federated_Learning\FedMD-SIAs\pretrained_MNIST" />
+      <recent name="G:\workspace\SIAs-Beyond_MIAs_in_Federated_Learning\FedMD-SIAs\pretrained_CIFAR10" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="G:\workspace\SIAs-Beyond_MIAs_in_Federated_Learning\FedSGD-SIAs\data\mnist" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="main_fed" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="SIAs-github" />
+      <module name="SIAs-Beyond_MIAs_in_Federated_Learning" />
+      <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -36,6 +138,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/FedSGD-SIAs/main_fed.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -51,41 +154,133 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-PY-241.14494.241" />
+        <option value="bundled-python-sdk-0509580d9d50-28c9f5db9ffe-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.14494.241" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="980e152b-de5b-4a24-ae63-a5f2cde3452e" name="Default Changelist" comment="" />
-      <created>1649820694329</created>
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="6731261b-ee05-43f7-aa5a-2730ef04267c" name="更改" comment="" />
+      <created>1712502438285</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1649820694329</updated>
+      <updated>1712502438285</updated>
+      <workItem from="1712502439428" duration="1547000" />
+      <workItem from="1712504004093" duration="2171000" />
+      <workItem from="1712531220287" duration="13393000" />
+      <workItem from="1712558206819" duration="7134000" />
+      <workItem from="1712579042492" duration="5419000" />
+      <workItem from="1712586884631" duration="647000" />
+      <workItem from="1712622267948" duration="5984000" />
+      <workItem from="1712666573328" duration="1242000" />
+      <workItem from="1712746029900" duration="12362000" />
+      <workItem from="1712832053776" duration="5123000" />
+      <workItem from="1712899455536" duration="22696000" />
+      <workItem from="1712984852213" duration="3935000" />
+      <workItem from="1713076766867" duration="31886000" />
+      <workItem from="1713138229807" duration="1036000" />
+      <workItem from="1713144869884" duration="8914000" />
+      <workItem from="1713237697965" duration="6962000" />
+      <workItem from="1713329876765" duration="2977000" />
+      <workItem from="1713422171635" duration="1250000" />
+      <workItem from="1713496793559" duration="629000" />
+      <workItem from="1713688379973" duration="596000" />
+      <workItem from="1713774794243" duration="39000" />
+      <workItem from="1713774873794" duration="212000" />
+      <workItem from="1713775205956" duration="1399000" />
+      <workItem from="1713856316829" duration="2000" />
+      <workItem from="1713860086124" duration="3000" />
+      <workItem from="1713934989924" duration="21053000" />
+      <workItem from="1714009239806" duration="25534000" />
+      <workItem from="1714095886137" duration="3144000" />
+      <workItem from="1714110438862" duration="26347000" />
+      <workItem from="1714201289042" duration="8561000" />
+      <workItem from="1714302476203" duration="3581000" />
+      <workItem from="1714355378155" duration="7416000" />
+      <workItem from="1714440978453" duration="88000" />
+      <workItem from="1714441084007" duration="139000" />
+      <workItem from="1714441368986" duration="4588000" />
+      <workItem from="1714969705871" duration="7000" />
+      <workItem from="1714972230049" duration="2968000" />
+      <workItem from="1715056817246" duration="5132000" />
+      <workItem from="1715146201650" duration="1198000" />
+      <workItem from="1715220852238" duration="5496000" />
+      <workItem from="1715669186572" duration="2755000" />
+      <workItem from="1715834090923" duration="1787000" />
+      <workItem from="1715943456555" duration="1841000" />
+      <workItem from="1715948781060" duration="892000" />
+      <workItem from="1715983339110" duration="3454000" />
+      <workItem from="1716097752504" duration="2593000" />
+      <workItem from="1716169392080" duration="6769000" />
+      <workItem from="1716255274205" duration="13660000" />
+      <workItem from="1716341900131" duration="16630000" />
+      <workItem from="1716429288807" duration="13678000" />
+      <workItem from="1716529391291" duration="1244000" />
+      <workItem from="1716706710692" duration="6310000" />
+      <workItem from="1716775198291" duration="17061000" />
+      <workItem from="1716860615469" duration="9000" />
+      <workItem from="1716870990632" duration="19967000" />
+      <workItem from="1716946101795" duration="12025000" />
+      <workItem from="1716970491328" duration="617000" />
+      <workItem from="1716979587596" duration="2025000" />
+      <workItem from="1716987795264" duration="2508000" />
+      <workItem from="1717034232496" duration="4560000" />
+      <workItem from="1717193410059" duration="6156000" />
+      <workItem from="1717302552438" duration="4856000" />
+      <workItem from="1717378975530" duration="22988000" />
+      <workItem from="1717465986333" duration="7818000" />
+      <workItem from="1717554172593" duration="11823000" />
+      <workItem from="1717579314827" duration="2052000" />
+      <workItem from="1717639211896" duration="23604000" />
+      <workItem from="1718004793912" duration="10586000" />
+      <workItem from="1718069986071" duration="4409000" />
     </task>
-    <task id="LOCAL-00001" summary="add purchase folder">
-      <created>1649823154254</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1649823154254</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add purchase folder">
-      <created>1649823288590</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1649823288590</updated>
-    </task>
-    <task id="LOCAL-00003" summary="add purchase folder">
-      <created>1649823349275</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1649823349275</updated>
-    </task>
-    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="add purchase folder" />
-    <option name="LAST_COMMIT_MESSAGE" value="add purchase folder" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FedAvg-SIAs/main_fed2.py</url>
+          <line>181</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/FedAvg-SIAs/main_fed2.py</url>
+          <line>180</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <default-breakpoints>
+        <breakpoint type="python-exception">
+          <properties notifyOnTerminate="true" exception="BaseException">
+            <option name="notifyOnTerminate" value="true" />
+          </properties>
+        </breakpoint>
+      </default-breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$Sia.coverage" NAME="Sia 覆盖结果" MODIFIED="1712505026366" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedAvg-SIAs/models" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$Sia_in_Fed.coverage" NAME="Sia_in_Fed 覆盖结果" MODIFIED="1712927210094" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedAvg-SIAs/models" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$CIFAR.coverage" NAME="CIFAR 覆盖结果" MODIFIED="1715987931118" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedMD-SIAs" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$Fed.coverage" NAME="Fed 覆盖结果" MODIFIED="1712925986052" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedAvg-SIAs/models" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$FEMNIST.coverage" NAME="FEMNIST 覆盖结果" MODIFIED="1712503943636" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedMD-SIAs" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$main_fed2.coverage" NAME="main_fed2 Coverage Results" MODIFIED="1714304839846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedAvg-SIAs" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$posixpath.coverage" NAME="posixpath 覆盖结果" MODIFIED="1712558177944" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/677788521/-1650636996" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$client.coverage" NAME="client 覆盖结果" MODIFIED="1712558173704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/AppData/Local/JetBrains/PyCharm2023.3/remote_sources/677788521/-1650636996/http" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$options.coverage" NAME="options Coverage Results" MODIFIED="1713937637687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedAvg-SIAs/utils" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$Sia4_single.coverage" NAME="Sia4_single Coverage Results" MODIFIED="1714115927618" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedAvg-SIAs/models" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$Sia3.coverage" NAME="Sia3 Coverage Results" MODIFIED="1714031657874" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedAvg-SIAs/models" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$FedMD_SIAs.coverage" NAME="FedMD_SIAs 覆盖结果" MODIFIED="1712504016116" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedMD-SIAs" />
+    <SUITE FILE_PATH="coverage/SIAs_Beyond_MIAs_in_Federated_Learning$main_fed.coverage" NAME="main_fed 覆盖结果" MODIFIED="1718070164570" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/FedSGD-SIAs" />
   </component>
 </project>
